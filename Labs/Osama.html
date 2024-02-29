@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xcel2k @ GitHub</title>
+    <!-- Add any additional meta tags and CSS links here -->
+</head>
+<body>
+    <header>
+        <h1>Photos Lost to Time</h1>
+        <nav>
+            <ul>
+                <li><a href="#About Us">About</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Contact Us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2><a id="About Us">About Us</a></h2>
+        <p>We are a people who are keen on keeping pictures archived, meaningful pictures that would otherwise be 
+            forgotten. We keep memorabilia by showcasing pictures that were once considered to be "great".  
+            We have been in business for less than a year, but we are trying to keep ourselves afloat.</p>
+    </section>
+    
+    <section>
+        <h2><a id="Gallery">Our Gallery</a></h2>
+        <div class="gallery">
+            <img src="lab2titans.jpg" alt="Titans" width="200" height="200">
+            <p>This image was captured by an amateur Photographer of Quetta, Osama.</p>
+        </div>
+        <div class="gallery">
+            <img src="lab2quetta.jpg" alt="Quetta" width="200" height="200">
+            <p>This image was captured by an amateur photographer of Quetta, Osama.</p>
+        </div>
+        <div class="gallery">
+            <img src="lab2beautiful.jpg" alt="Beautiful" width="200" height="200">
+            <p>This image was captured by an amateur photographer of Quetta, Osama.</p>
+        </div>
+    </section>
+    
+    
+    <section>
+        <h2><a id="Contact Us">Contact Us</a></h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+    
+    <section>
+        <h2>Current Time</h2>
+        <p>The time at which this lab was submitted was somewhere around 11.30 am.</p>
+    </section>
+    
+    <section>
+        <h2>Highlighted Text</h2>
+        <p><mark>This is some important text that needs to stand out.</mark></p>
+    </section>
+    
+    <section>
+        <h2>Audio Clip</h2>
+        <audio controls>
+            <source src="path_to_audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+    
+    <section>
+        <h2>Video Clip</h2>
+        <video controls>
+            <source src="path_to_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    
+    <section>
+        <h2>Canvas Animation</h2>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Xcel2k @ GitHub - Website -- All rights reserved</p>
+    </footer>
+    <!-- Conditional comments targeting IE -->
+    <!--[if IE]>
+        <script>
+            alert('Hehehehe are using Internet Explorer.');
+        </script>
+    <![endif]-->
+
+
+</body>
+</html>

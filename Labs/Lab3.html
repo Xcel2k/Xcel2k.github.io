@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xcel2k @ GitHub</title>
+    <style>
+        /* Google Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+    
+        /* Reset for styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+    
+        body {
+            background-image: url('Snowfall2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            line-height: 1.6;
+            color: #555;
+            background-color: #f4f4f4; /* A light grey background for better contrast */
+            padding: 20px; /* Add some padding around the content */
+        }
+    
+        header {
+            background: linear-gradient(to right, #654ea3, #eaafc8); /* A vibrant gradient for the header */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+    
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding: 1rem 0;
+        }
+    
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+    
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            transition: color 0.3s ease-in-out;
+        }
+    
+        nav a:hover {
+            color: #ddd;
+        }
+    
+        section {
+            margin-bottom: 1rem;
+            background: whitesmoke; /* White background for sections */
+            padding: 1rem;
+            border-radius: 10px; /* Rounded corners for the sections */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+    
+        .gallery img {
+            max-width: 100%; /* Responsive image sizing */
+            height: auto;
+            border: 5px solid #333; /* Adds a border around the image */
+        }
+    
+        footer {
+            background: linear-gradient(to right, #654ea3, #eaafc8); /* A matching gradient for the footer */
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem; /* Add space before the footer */
+            position: relative;
+        }
+        canvas {
+    background-color: violet;
+    display: block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -400px; /* Position the canvas above the footer */
+    left: 50%;
+    transform: translateX(-50%); /* Center the canvas */
+}
+
+/* Add some breathing room at the bottom */
+body::after {
+    content: '';
+    display: block;
+    height: 20px; /* Same height as the footer */
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Styling for the Gallery descriptions */
+.gallery p {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.gallery {
+    position: relative;
+    overflow: hidden; /* Hide the overflow to contain the absolute positioned paragraph */
+}
+
+/* Responsive image gallery */
+.gallery img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Ensure links are visible */
+a {
+    color: #009688;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Custom styles for the 'About Us' and 'Contact Us' sections */
+#About Us, #Contact Us {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+footer p {
+    color: #f8f8f8;
+    font-size: 1rem;
+    margin-top: 450px;
+}
+/* Simple animation for the canvas umbrella effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+canvas {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Ensure the header links are clearly visible and spaced */
+nav ul li a {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Improve the form appearance in the 'Contact Us' section */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #444;
+}
+
+</style>
+
+    
+</head>
+<body>
+    <header>
+        <h1>Photos Lost to Time</h1>
+        <nav>
+            <ul>
+                <li><a href="#About Us">About</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Contact Us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2><a id="About Us">About Us</a></h2>
+        <p>We are a people who are keen on keeping pictures archived, meaningful pictures that would otherwise be 
+            forgotten. We keep memorabilia by showcasing pictures that were once considered to be "great".  
+            We have been in business for less than a year, but we are trying to keep ourselves afloat.</p>
+    </section>
+    
+    <section>
+        <h2><a id="Gallery">Our Gallery</a></h2>
+        <div class="gallery">
+            <img src="lab2titans.jpg" alt="Titans" width="200" height="200">
+            <p>This image was captured by an amateur Photographer of Quetta, Osama.</p>
+        </div>
+        <div class="gallery">
+            <img src="lab2quetta.jpg" alt="Quetta" width="200" height="200">
+            <p>This image was captured by an amateur photographer of Quetta, Osama.</p>
+        </div>
+        <div class="gallery">
+            <img src="lab2beautiful.jpg" alt="Beautiful" width="200" height="200">
+            <p>This image was captured by an amateur photographer of Quetta, Osama.</p>
+        </div>
+    </section>
+    
+    
+    <section>
+        <h2><a id="Contact Us">Contact Us</a></h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+    
+    <section>
+        <h2>Current Time</h2>
+        <p><mark><time datetime="2024-03-04T08:00">March 4, 2024, 9:00 PM</time></mark></p>
+    </section>
+    
+    <section>
+        <h2>Highlighted Text</h2>
+        <p><mark>This is some important text that needs to stand out.</mark></p>
+    </section>
+    
+    <section>
+        <h2>Audio Clip</h2>
+        <p>This is the song that is playing in the video below.</p>
+        <audio controls>
+            <source src="BaahonKDarmiyaan.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+    
+    <section>
+        <h2>Video Clip</h2>
+        <p>This video is shows the route the owner of this Website takes everyday on their way to University</p>
+        <video controls>
+            <source src="roadtonust.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    
+    <section>
+        <h2 class="animated-alphabet">A</h2>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+    </section>
+    
+    <footer>
+        <canvas id="myCanvas"></canvas>
+        <p>&copy; 2023 Xcel2k @ GitHub - Website -- All rights reserved</p>
+    </footer>
+    <!-- Conditional comments targeting IE -->
+    <!--[if IE]>
+        <script>
+            alert('Hehehehe are using Internet Explorer.');
+        </script>
+    <![endif]-->
+
+
+</body>
+</html>

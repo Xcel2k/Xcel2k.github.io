@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    @keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+  from { border-right-color: rgba(255, 255, 255, 0.75); }
+  to { border-right-color: transparent; }
+}
+
+.typewriter-text {
+  color: white;
+  display: inline-block;
+  overflow: hidden;
+  border-right: .35em solid black; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typewriter 3.5s steps(40) 1s infinite normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+p {
+    color: white;
+}
+h2,h3 {
+    color: black;
+}
+
+</style>
+<!-- Navigation bar --> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: black;">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="vh-100 d-flex align-items-center justify-content-center" style="background: url('Osama6.jpg') no-repeat center center; background-size: cover;">
+    <div class="container">
+        <h1 class="display-4" style = "color: white;">Hello, I'm <br><span class="typewriter-text">Muhammad Osama</span></h1>
+        <p class="typewriter-text">A Computer Science Student learning Web Development...</p>
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="py-5" style="background: #0F222C;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>About Me</h2>
+                <p>I'm a Django Developer from Pakistan, currently interning for LearnOBots in the same...<br>
+                    I also happen to be a hobbyist photographer, so do check out my <a href="https://instagram.com/mohammad_xcel_osama">insta</a> for some amazing pictures, Ciao!
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <!-- Optionally, add a personal photo here -->
+                <img src="Osama14.jpg" alt="Osama" class="img-fluid">
+            </div>            
+        </div>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="py-5" style="background: #0F222C;">
+    <div class="container">
+        <h2 class="text-center">Skills</h2>
+        <div class="row">
+            <!-- Skill Item -->
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="icon-example"></i> <!-- Replace with a relevant icon or an image -->
+                    <h3>Django Wizard</h3>
+                    <p>An expert in crafting legitimately interesting and responsive websites using Django stack with Python3.</p>
+                </div>
+            </div>
+            <!-- Repeat for other skills -->
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5" style="background: #0F222C;">
+    <div class="container">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+            <!-- Project Item -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="dld.jpg" class="card-img-top" alt="Project"> <!-- Replace with your project image -->
+                    <div class="card-body">
+                        <h5 class="card-title">Automatic Streetlight Controller using Arduino</h5>
+                        <p class="card-text" style = "color: black;">In this project we were all tasked to create an automatic streetlight controller to reduce <br>the load on electricity stations caused by the streetlights all over the city.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other projects -->
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5" style="background: #0F222C;">
+    <div class="container">
+        <h2 class="text-center">Contact</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <p class="mb-0">&copy; 2024 Xcel2k. All Rights Reserved.</p>
+        <p>Follow me on social media.</p>
+        <!-- Social media links -->
+        <!-- Example for social media link -->
+        <a href="https://twitter.com/xcel2k" class="text-white me-2">
+            <i class="fab fa-twitter"><!-- Twitter icon (font-awesome) --></i>
+        </a>
+        <!-- Repeat for other social media links -->
+    </div>
+</footer>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+-->
+
+</body>
+</html>
+
+               

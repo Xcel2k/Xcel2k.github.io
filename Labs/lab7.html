@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plz chal ja bhai</title>
+<link rel="stylesheet" href="lab7.css">
+</head>
+<body>
+<div class="calculator">
+    <div class="menu">
+        <div class="menu-button" onclick="toggleMenu()">...</div>
+        <div id="submenu" class="submenu" style="display: none;">
+            <div class="menu-option" onclick="enableUnitConversion()">Unit Conversion</div>
+            <div class="menu-option" onclick="enableCurrencyConversion()">Currency Conversion</div>
+            <div class="menu-option" onclick="enableScientificMode()">Scientific Mode</div>
+
+        </div>
+        
+        
+    </div>
+    <div id="display" class="display"></div>
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="setOperation('+')">+</button>
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="setOperation('-')">-</button>
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="setOperation('*')">*</button>
+    <button onclick="appendNumber('0')">0</button>
+    <button onclick="calculateResult()">=</button>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="setOperation('/')">/</button>
+<!-- ... your existing HTML ... -->
+
+<!-- Scientific Mode Section -->
+
+<!--
+<div id="scientific-mode" class="feature-section conversion" style="display: none;">
+    <div class="button-row">
+        <button onclick="performScientificOperation('sqrt')">√</button>
+        <button onclick="performScientificOperation('pow')">x^2</button>
+    </div>
+    <div class="button-row">
+        <button onclick="performScientificOperation('log')">log</button>
+        <button onclick="performScientificOperation('sin')">sin</button>
+    </div>
+    <div class="button-row">
+        <button onclick="performScientificOperation('cos')">cos</button>
+        <button onclick="performScientificOperation('tan')">tan</button>
+    </div>
+</div>
+-->
+
+<!-- Unit Conversion Section -->
+<div id="unit-conversion" class="feature-section conversion" style="display: none;">
+    <input type="number" id="unit-input" placeholder="Enter value">
+    <select id="unit-type">
+        <option value="feet">Meters to Feet</option>
+        <option value="centimeters">Meters to Centimeters</option>
+     
+    </select>
+    <button onclick="performUnitConversion()">Convert</button>
+    <div id="unit-conversion-result"></div>
+</div>
+
+
+
+    <!-- Currency Conversion Section -->
+    <div id="currency-conversion" class="feature-section conversion" style="display: none;">
+        <input type="number" id="currency-input" placeholder="Enter USD">
+        <button onclick="performCurrencyConversion('EUR')">Convert to EUR</button>
+        <button onclick="performCurrencyConversion('PKR')">Convert to PKR</button>
+        <div id="currency-conversion-result"></div>
+    </div>
+
+    
+
+    
+</div>
+<script src="lab7.js"></script> <!-- External JS file reference -->
+</body>
+</html>
